@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+
+
+{% block class %}
+
+class="sub_page"
+{% endblock class %}
+
+{% block feedback_statas %}active{% endblock feedback_statas %}
+{% block main %}
+<!--start feedback form -->
+ 
+  <section class="book_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Book A Table
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form_container">
+            <form action="">
+              <div>
+                <input type="text" class="form-control" name = "user_name" placeholder="Your Name" />
+              </div>
+              <div>
+                <textarea class="form-control" row="3" name = "Description" placeholder="Descrip Your experiance Here "></textarea>
+                
+              </div>
+             
+              <div>
+                <select class="form-control nice-select wide">
+                  <option value="" disabled selected>
+                        Please Give Us Rating ?
+                  </option>
+                  <option value="1">
+                    1
+                  </option>
+                  <option value="2">
+                    2
+                  </option>
+                  <option value="3">
+                    3
+                  </option>
+                  <option value="4">
+                    4
+                  </option>
+                  <option value="5">
+                    5
+                  </option>
+                </select>
+              </div>
+              
+              <div>
+                {% comment %} <label form="formFileLg" class="form-label">Select Your Image</label> {% endcomment %}
+                <input class="form-control" form-control-lg id="formFileLg" type="file">
+              </div>
+              
+              <div class="btn_box">
+                <button>
+                  submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6">
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<!--end feedback form -->
+{% endblock main %}
